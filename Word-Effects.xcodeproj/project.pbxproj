@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		62FA3F35229C75AE006C0E6D /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 62FA3F34229C75AE006C0E6D /* main.m */; };
+		62FA3F3D229C849D006C0E6D /* WordEffects.m in Sources */ = {isa = PBXBuildFile; fileRef = 62FA3F3C229C849D006C0E6D /* WordEffects.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -25,6 +26,8 @@
 /* Begin PBXFileReference section */
 		62FA3F31229C75AE006C0E6D /* Word-Effects */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = "Word-Effects"; sourceTree = BUILT_PRODUCTS_DIR; };
 		62FA3F34229C75AE006C0E6D /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		62FA3F3B229C849D006C0E6D /* WordEffects.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WordEffects.h; sourceTree = "<group>"; };
+		62FA3F3C229C849D006C0E6D /* WordEffects.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WordEffects.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +61,8 @@
 			isa = PBXGroup;
 			children = (
 				62FA3F34229C75AE006C0E6D /* main.m */,
+				62FA3F3B229C849D006C0E6D /* WordEffects.h */,
+				62FA3F3C229C849D006C0E6D /* WordEffects.m */,
 			);
 			path = "Word-Effects";
 			sourceTree = "<group>";
@@ -118,6 +123,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				62FA3F3D229C849D006C0E6D /* WordEffects.m in Sources */,
 				62FA3F35229C75AE006C0E6D /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
