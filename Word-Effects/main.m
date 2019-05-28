@@ -26,7 +26,7 @@ int main(int argc, const char * argv[]) {
             
             // print as a c string
             printf("Your string is %s", inputChars);
-            printf("Input a number (1-7) to choose your word effect!");
+            printf("Input a number (1-8) to choose your word effect!");
 
             BOOL j = TRUE;
             
@@ -35,11 +35,11 @@ int main(int argc, const char * argv[]) {
                 // effectCase = scanf(@"%d", &inputNumber);
                 fgets(inputNumber, 32, stdin);
                 effectCase = atoi(&inputNumber[0]);
-                if (effectCase < 8 && effectCase > 0){
+                if (effectCase < 9 && effectCase > 0){
                     j = FALSE;
                 }
                 else {
-                    printf("That number is not an option. Input a number (1-7) to choose your word effect!");
+                    printf("That number is not an option. Input a number (1-8) to choose your word effect!");
                 }
             }
             

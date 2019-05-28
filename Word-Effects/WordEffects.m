@@ -24,6 +24,7 @@
     
     NSString * changedString = _effectString;
     NSInteger  numberValue;
+    NSArray *punctuation = @[@",", @".", @"\"", @"\'", @"?",@"!"];
     
     switch (_effectCase) {
         case 1:
@@ -61,17 +62,24 @@
                 
             }
             break;
+            
         case 6:
             // De-Space-It
             changedString = [changedString stringByReplacingOccurrencesOfString: @" " withString: @"-"];
             break;
+            
         case 7:
             // Letter Count
             changedString = [changedString stringByReplacingOccurrencesOfString: @" " withString: @""];
             changedString = [NSString stringWithFormat:@"%lu", [changedString length]];
             
             break;
-        default:
+        case 8:
+            // remove all punctuation
+            for (NSString *punct in punctuation) {
+                changedString = [changedString stringByReplacingOccurrencesOfString: punct withString: @""];
+            }
+            break;
             break;
     }
     return changedString;
