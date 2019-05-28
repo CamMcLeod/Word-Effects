@@ -65,7 +65,12 @@
             // De-Space-It
             changedString = [changedString stringByReplacingOccurrencesOfString: @" " withString: @"-"];
             break;
+        case 7:
+            // Letter Count
+            changedString = [changedString stringByReplacingOccurrencesOfString: @" " withString: @""];
+            changedString = [NSString stringWithFormat:@"%lu", [changedString length]];
             
+            break;
         default:
             break;
     }
