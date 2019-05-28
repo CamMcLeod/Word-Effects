@@ -44,8 +44,8 @@ int main(int argc, const char * argv[]) {
             }
             
             // convert char array to an NSString object
-            NSString *inputString = [NSString stringWithUTF8String:inputChars];
-            inputString = [inputString stringByReplacingOccurrencesOfString: @"\n" withString: @""];
+            NSMutableString *inputString = [NSMutableString stringWithUTF8String:inputChars];
+            [inputString setString: [inputString stringByReplacingOccurrencesOfString: @"\n" withString: @""]];
             // assign effect to WordEffects class
             WordEffects * myEffect = [[WordEffects alloc] initWithString: inputString  andEffect:effectCase];
             

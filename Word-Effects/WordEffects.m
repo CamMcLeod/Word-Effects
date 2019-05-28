@@ -10,7 +10,7 @@
 
 @implementation WordEffects
 
-- (instancetype)initWithString:(NSString *)string andEffect: (int) chosenEffect {
+- (instancetype)initWithString:(NSMutableString *)string andEffect: (int) chosenEffect {
     
     self = [super init];
     if (self) {
@@ -20,21 +20,21 @@
     return self;
 }
 
-- (NSString *)effect {
+- (NSMutableString *)effect {
     
-    NSString * changedString = _effectString;
+    NSMutableString * changedString = _effectString;
     NSInteger  numberValue;
     NSArray *punctuation = @[@",", @".", @"\"", @"\'", @"?",@"!"];
     
     switch (_effectCase) {
         case 1:
             // Uppercase
-            changedString = [changedString uppercaseString];
+            [changedString setString:[changedString uppercaseString]];
             break;
             
         case 2:
             // Lowercase
-            changedString = [changedString lowercaseString];
+            [changedString setString:[changedString lowercaseString]];
             break;
             
         case 3:
@@ -42,42 +42,43 @@
             if ([changedString integerValue]) {
                 
                 numberValue = [changedString integerValue];
-                changedString = [NSString localizedStringWithFormat: @"%ld", numberValue];
+                [changedString setString: [NSMutableString localizedStringWithFormat: @"%ld", numberValue]];
                 
-            } else (changedString = @"Input was not a number!");
+            } else ([changedString setString: @"Input was not a number!"]);
             break;
             
         case 4:
             // Canadianize
-            changedString = [changedString stringByAppendingString: @", eh?"];
+            
+            [changedString setString: [changedString stringByAppendingString: @", eh?"]];
             break;
             
         case 5:
             // Respond
             if ([changedString hasSuffix: @"?"]) {
-                changedString = @"I don't know";
+                [changedString setString: @"I don't know"];
                 
             } else if ([changedString hasSuffix: @"!"]) {
-                changedString = @"Whoa, calm down!";
+                [changedString setString: @"Whoa, calm down!"];
                 
             }
             break;
             
         case 6:
             // De-Space-It
-            changedString = [changedString stringByReplacingOccurrencesOfString: @" " withString: @"-"];
+            [changedString setString: [changedString stringByReplacingOccurrencesOfString: @" " withString: @"-"]];
             break;
             
         case 7:
             // Letter Count
-            changedString = [changedString stringByReplacingOccurrencesOfString: @" " withString: @""];
-            changedString = [NSString stringWithFormat:@"%lu", [changedString length]];
+            [changedString setString: [changedString stringByReplacingOccurrencesOfString: @" " withString: @""]];
+            [changedString setString: [NSMutableString stringWithFormat:@"%lu", [changedString length]]];
             
             break;
         case 8:
             // remove all punctuation
             for (NSString *punct in punctuation) {
-                changedString = [changedString stringByReplacingOccurrencesOfString: punct withString: @""];
+                [changedString setString: [changedString stringByReplacingOccurrencesOfString: punct withString: @""]];
             }
             break;
             break;

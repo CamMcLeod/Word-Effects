@@ -12,12 +12,12 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface WordEffects : NSObject
 
-@property NSString * effectString;
+@property NSMutableString * effectString;
 @property int effectCase;
 
-- (instancetype)initWithString:(NSString *)string andEffect: (int) chosenEffect;
+- (instancetype)initWithString:(NSMutableString *)string andEffect: (int) chosenEffect;
 
-- (NSString *)effect;
+- (NSMutableString *)effect;
 
 @end
 
