@@ -26,11 +26,8 @@ int main(int argc, const char * argv[]) {
             
             // print as a c string
             printf("Your string is %s", inputChars);
-            
-            
             printf("Input a number (1-6) to choose your word effect!");
-            // limit input to max 1 characters
-            
+
             BOOL j = TRUE;
             
             while (j){
